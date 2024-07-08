@@ -1,6 +1,7 @@
 package me.smoshy314.easyhome;
 
 import com.mojang.brigadier.Command;
+import me.smoshy314.easyhome.commands.localTeleport;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.minecraft.server.command.CommandManager;
@@ -28,10 +29,7 @@ public class EasyHome implements ModInitializer {
         };
 
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
-            dispatcher.register(CommandManager.literal("top").executes(context -> {
-                context.getSource().sendFeedback(() -> Text.literal("Called /top with no arguments."), false);
-                return 1;
-            }));
+            localTeleport.register(dispatcher);
         });
     }
 }
