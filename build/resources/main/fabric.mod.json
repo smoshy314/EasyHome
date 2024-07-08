@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "easyhome",
+  "version": "1.0-SNAPSHOT",
+  "name": "easyHome",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/smoshy314/MinecraftHomeMod"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/easyhome/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "me.smoshy314.easyhome.client.EasyHomeClient"
+    ],
+    "main": [
+      "me.smoshy314.easyhome.EasyHome"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "fabric": "*",
+    "minecraft": "1.21"
+  }
+}
